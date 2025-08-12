@@ -1,0 +1,41 @@
+{
+  "name": "@flavorly/triggerdev-extensions-import-raw",
+  "version": "0.0.1",
+  "description": "A trigger.dev extension that allows importing files as raw strings with alias support",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir=dist --target=node --format=esm --minify && bun run build:types",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "dev": "bun build src/index.ts --outdir=dist --target=node --format=esm --watch",
+    "lint": "biome check src/",
+    "format": "biome format --write src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "trigger.dev",
+    "extension",
+    "raw",
+    "import",
+    "build"
+  ],
+  "author": "flavorly",
+  "license": "MIT",
+  "peerDependencies": {
+    "@trigger.dev/build": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "typescript": "^5.7.2"
+  }
+}
