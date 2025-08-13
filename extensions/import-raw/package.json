@@ -1,6 +1,6 @@
 {
   "name": "@flavorly/triggerdev-extensions-import-raw",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A trigger.dev extension that allows importing files as raw strings with alias support",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
